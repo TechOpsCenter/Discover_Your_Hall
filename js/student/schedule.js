@@ -1,0 +1,1 @@
+export function selectSchedule(rows,profile){return rows.filter(r=>(!profile.college||r.college===profile.college)&&(!profile.major||r.major===profile.major)&&(!profile.level||r.level===profile.level)&&(!profile.group||!r.group||r.group===profile.group)&&(!profile.day||r.day===profile.day));}

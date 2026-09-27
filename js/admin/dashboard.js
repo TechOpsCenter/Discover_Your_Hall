@@ -1,0 +1,1 @@
+export function dashboardStats(rows,requests=[]){return {records:rows.length,materials:new Set(rows.map(r=>r.course).filter(Boolean)).size,rooms:new Set(rows.map(r=>r.room).filter(Boolean)).size,majors:new Set(rows.map(r=>r.major).filter(Boolean)).size,newRequests:requests.filter(r=>r.status==='جديد').length};}

@@ -1,0 +1,1 @@
+export const WEEK_DAYS=['السبت','الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة']; export function groupByDay(rows){return Object.fromEntries(WEEK_DAYS.map(d=>[d,rows.filter(r=>r.day===d)]));}

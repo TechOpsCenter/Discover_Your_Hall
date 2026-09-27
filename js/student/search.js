@@ -1,0 +1,1 @@
+export function filterSchedule(rows,q,type='all'){const map={course:'course',teacher:'teacher',room:'room'};q=String(q||'').toLowerCase();return rows.filter(r=>type==='all'?Object.values(r).some(v=>String(v??'').toLowerCase().includes(q)):String(r[map[type]]??'').toLowerCase().includes(q));}

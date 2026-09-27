@@ -1,0 +1,1 @@
+export function notifications({requests=[],conflicts=0,review=0}={}){return [...(requests.filter(r=>r.status==='جديد').map(r=>({type:'طلب جديد',id:r.id}))),...(conflicts?[{type:'تعارضات',count:conflicts}]:[]),...(review?[{type:'مراجعة بيانات',count:review}]:[])];}
